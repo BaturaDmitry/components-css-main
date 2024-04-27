@@ -1,0 +1,31 @@
+.FooterContainer {
+    margin-top: auto;
+    padding: 60px 0 50px;
+    background-color: var(--black);
+    color: var(--footer-text);
+  }
+  @media (max-width: 767.98px) {
+    .FooterContainer {
+      padding: 40px 0 30px;
+    }
+  }
+  
+  .FooterContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 27px;
+  }
+  @media (max-width: 767.98px) {
+    .FooterContent {
+      row-gap: 20px;
+    }
+  }
+  
+  .Copyright {
+    font-size: 16px;
+  }
+  .Copyright p + p {
+    margin-top: 0.5em;
+  }
+  

@@ -1,0 +1,15 @@
+.LanguageText {
+    color: var(--header-text);
+    transition: all 0.3s;
+  }
+  
+  .LanguageSwitcherContainer {
+    display: flex;
+    order: 3;
+    z-index: 10;
+  }
+  .LanguageSwitcherContainer svg {
+    transition: all 0.3s;
+    color: var(--header-text);
+  }
+  

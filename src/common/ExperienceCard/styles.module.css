@@ -1,0 +1,143 @@
+.Document {
+    display: none;
+    height: 70px;
+    width: fit-content;
+    border-radius: 10px;
+  }
+  .Document:hover {
+    cursor: pointer;
+    opacity: 0.8;
+  }
+  
+  .Description {
+    width: 100%;
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  @media only screen and (max-width: 768px) {
+    .Description {
+      font-size: 12px;
+    }
+  }
+  
+  .Span {
+    overflow: hidden;
+    display: -webkit-box;
+    max-width: 100%;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+  }
+  
+  .Card {
+    width: 650px;
+    border-radius: 10px;
+    box-shadow: var(--shadow-bg-card);
+    padding: 12px 16px;
+    justify-content: space-between;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    transition: all 0.3s ease-in-out;
+    border: 0.1px solid transparent;
+  }
+  .Card:hover {
+    box-shadow: var(--shadow-bg-card-hover);
+    transform: translateY(-5px);
+  }
+  @media only screen and (max-width: 768px) {
+    .Card {
+      padding: 15px 15px;
+      gap: 8px;
+      width: 350px;
+    }
+  }
+  @media (max-width: 450px) {
+    .Card {
+      width: 250px;
+    }
+  }
+  .Card:hover .Document {
+    display: flex;
+  }
+  .Card:hover .Span {
+    overflow: visible;
+    -webkit-line-clamp: unset;
+  }
+  
+  .Top {
+    width: 100%;
+    display: flex;
+    gap: 12px;
+  }
+  
+  .Image {
+    height: 50px;
+    background-color: var(--white);
+    border-radius: 10px;
+    margin-top: 4px;
+  }
+  @media only screen and (max-width: 768px) {
+    .Image {
+      height: 40px;
+    }
+  }
+  
+  .Body {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .Role {
+    font-weight: bold;
+    font-size: 18px;
+  }
+  @media only screen and (max-width: 768px) {
+    .Role {
+      font-size: 14px;
+    }
+  }
+  
+  .Company {
+    font-size: 14px;
+  }
+  @media only screen and (max-width: 768px) {
+    .Company {
+      font-size: 12px;
+    }
+  }
+  
+  .Date {
+    font-size: 10px;
+  }
+  @media only screen and (max-width: 768px) {
+    .Date {
+      font-size: 10px;
+    }
+  }
+  
+  .Skills {
+    width: 100%;
+    display: flex;
+    gap: 12px;
+    margin-top: -10px;
+  }
+  
+  .ItemWrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  
+  .Skill {
+    font-size: 16px;
+  }
+  @media only screen and (max-width: 768px) {
+    .Skill {
+      font-size: 12px;
+    }
+  }
+  

@@ -1,0 +1,15 @@
+.Wrapper {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+  
+  .Wrapper > main {
+    flex: 1 1 auto;
+  }
+  
+  .Wrapper > * {
+    min-width: 0;
+  }
+  

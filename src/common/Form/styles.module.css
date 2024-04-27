@@ -1,0 +1,135 @@
+.Container {
+    transition: 0.8s 0.2s;
+    color: var(--project-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    z-index: 1;
+    align-items: center;
+  }
+  @media (max-width: 960px) {
+    .Container {
+      padding: 0px;
+    }
+  }
+  
+  .Wrapper {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    max-width: 1350px;
+    padding-bottom: 50px;
+    gap: 12px;
+  }
+  @media (max-width: 960px) {
+    .Wrapper {
+      flex-direction: column;
+    }
+  }
+  
+  .ContactForm {
+    width: 100%;
+    max-width: 700px;
+    display: flex;
+    flex-direction: column;
+    padding: 32px;
+    border-radius: 16px;
+    gap: 20px;
+    box-shadow: var(--box-shadow);
+  }
+  @media (max-width: 600px) {
+    .ContactForm {
+      padding: 15px;
+    }
+  }
+  
+  .ContactTitle {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 6px;
+  }
+  @media (max-width: 600px) {
+    .ContactTitle {
+      font-size: 20px;
+    }
+  }
+  
+  .ContactInput,
+  .ContactInputMessage {
+    flex: 1;
+    background-color: transparent;
+    border: 1px solid var(--light-gray);
+    outline: none;
+    width: inherit;
+    font-size: 18px;
+    border-radius: 12px;
+    padding: 12px 16px;
+  }
+  .ContactInput:focus,
+  .ContactInputMessage:focus {
+    border: 1px solid var(--purple);
+  }
+  
+  .ContactButton {
+    font-size: 20px;
+    font-weight: 800;
+    cursor: pointer;
+    width: 100%;
+    color: var(--button-color);
+    background: var(--button-bg);
+    text-align: center;
+    padding: 25px 16px;
+    margin-top: 2px;
+    transition: 0.5s;
+    border-radius: 12px;
+    border: none;
+  }
+  @media (max-width: 600px) {
+    .ContactButton {
+      padding: 20px 16px;
+      font-size: 18px;
+    }
+  }
+  .ContactButton:hover {
+    background: var(--magenta);
+    color: var(--white);
+  }
+  
+  .PopupModal {
+    padding: 25px 75px;
+    border-radius: 15px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 48px;
+  }
+  @media (max-width: 767.9px) {
+    .PopupModal {
+      padding: 52px 15px;
+      font-size: 32px;
+    }
+  }
+  
+  .PopupContent {
+    margin: auto;
+    font-family: 'Nunito';
+    font-weight: bold;
+  }
+  
+  .PopupActions {
+    width: 250px;
+    bottom: 0;
+  }
+  @media (max-width: 767.9px) {
+    .PopupActions {
+      width: 230px;
+    }
+  }
+  

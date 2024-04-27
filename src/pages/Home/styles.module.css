@@ -1,0 +1,157 @@
+.PageWrapper {
+    background-color: var(--projects-bg);
+    color: var(--project-color);
+    scroll-behavior: smooth;
+  }
+  
+  .Section {
+    background-color: var(--projects-bg);
+  }
+
+  @media (max-width: 768px) {
+    .Section {
+      padding-top: 40px;
+      padding-bottom: 20px;
+    }
+  }
+  
+  .TypeWriterContainer {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .TypeWriterWrapper {
+    color: var(--purple);
+  }
+  
+  .SectionSkills {
+    background: var(--uniq-section);
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+  
+  @media (max-width: 768px) {
+    .SectionSkills {
+      padding-top: 40px;
+      padding-bottom: 20px;
+    }
+  }
+  
+  .Fullscreen {
+    min-height: 100vh;
+  }
+  
+  .Intro {
+    position: relative;
+    display: grid;
+    background-size: inherit;
+    row-gap: 50px;
+    max-width: 75rem;
+    margin: 0 auto;
+    padding-top: 200px;
+    padding-bottom: 50px;
+  }
+  
+  @media (max-width: 1170px) {
+    .Intro {
+      padding-top: 120px;
+      padding-bottom: 100px;
+    }
+  }
+  
+  @media (min-width: 768px) {
+    .Intro {
+      grid-template-columns: 1fr calc((500 / 1170) * 100%);
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .Intro {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .Intro {
+      background-size: contain;
+    }
+  }
+  
+  .IntroBody {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: inherit;
+    text-align: left;
+  }
+  
+  @media (max-width: 768px) {
+    .IntroBody {
+      text-align: center;
+    }
+  }
+  
+  .IntroTitle {
+    font-size: 3.125rem;
+    font-weight: 700;
+    line-height: 1.4;
+    margin-bottom: 20px;
+  }
+  
+  @media (max-width: 1170px) {
+    .IntroTitle {
+      font-size: 32px;
+      margin-bottom: 10px;
+    }
+  }
+  
+  .IntroTitle em {
+    font-style: normal;
+  }
+  
+  .IntroText {
+    line-height: 2;
+    font-size: 20px;
+  }
+  
+  .IntroText p + p {
+    margin-top: 0.5em;
+  }
+  
+  .IntroImage {
+    max-height: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    object-fit: cover;
+  }
+  
+  @media (max-width: 480px) {
+    .IntroImage {
+      padding-bottom: 300px;
+    }
+  }
+  
+  .IconMenu {
+    display: none;
+  }
+  
+  @media (max-width: 991.98px) {
+    .IconMenu {
+      display: block;
+    }
+  }
+  
+  .PopupBg {
+    background: var(--ghost-white);
+    border: 1px solid var(--semi-transparent--black);
+  }
+  
+  .Button {
+    background: var(--dupont);
+    color: var(--black);
+  }
+  
+  .Button:hover {
+    color: var(--white);
+  }
+  

@@ -1,0 +1,67 @@
+{
+    "intro": {
+        "title": "Интро заголовок",
+        "IM": "Интро описание",
+        "text": "текст",
+        "typeWritter-frontend": "Бегущая строка 1",
+        "typeWritter-programmer": "Бегущая строка 2"
+      },
+
+      "section": {
+        "skills": {
+            "title": "Секция технологий",
+            "suptitle": "подзаголовок"
+        },
+        "projects": {
+            "title": "Проекты заголовок",
+            "suptitle": "Проекты подзаголовок",
+            "toggle-button": {
+                "all": "Все",
+                "store": "Магазин",
+                "landing": "Посадка",
+                "others": "Другие"
+            },
+            "details": {
+                "buttons": {
+                    "view-code1": "Заголовок кнопки",
+                    "view-code2": "Перейти на github",
+                    "live-app1": "Заголовок кнопки",
+                    "live-app2": "Перейти на сайт"
+                }
+            }
+        },
+        "contacts": {
+            "title": "Заголовок контактов"
+        }
+      },
+
+      "header": {
+        "logo-title": "Заголовок лого",
+        "About": "О нас",
+        "projects": "Проекты",
+        "contacts": "Контакты",
+        "Button": "кнопка заголовка"
+      },
+
+      "Form": {
+        "title": "Заголовок формы",
+        "placeholder-email": "Почта",
+        "placeholder-name": "Название",
+        "placeholder-message": "Сообщение",
+        "Button-submit": "Подтвердить",
+        "Button-sent": "Отправить"
+      },
+
+      "email": {
+        "required": "Требуется электронная почта",
+        "message": "Пожалуйста, введите действительный адрес электронной почты! Пример: example@gmail.com"
+      },
+
+      "name": {
+        "required": "Имя является обязательным полем!"
+      },
+
+      "message": {
+        "required": "Сообщение является обязательным полем!"
+      }
+}

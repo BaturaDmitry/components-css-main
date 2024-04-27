@@ -1,0 +1,154 @@
+.Container {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: top;
+    background-color: var(--dark-bg);
+    justify-content: center;
+    overflow-y: scroll;
+    min-width: 100%;
+    transition: all 0.5s ease;
+  }
+  
+  .Wrapper {
+    background-color: var(--projects-bg);
+    max-width: 800px;
+    width: 100%;
+    border-radius: 16px;
+    margin: 50px 12px;
+    height: min-content;
+    color: var(--project-color);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    line-height: 1.6rem;
+  }
+  
+  .Title {
+    font-size: 28px;
+    font-weight: 600;
+    margin: 15px 6px 0px 6px;
+  }
+  
+  .Date {
+    font-size: 16px;
+    margin: 2px 6px;
+    font-weight: 400;
+  }
+  
+  .Desc {
+    margin: 8px 6px;
+    font-size: var(--bodyRegular-font-size);
+  }
+  
+  .Image {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-top: 30px;
+    box-shadow: var(--shadow-bg-image-project-details);
+  }
+  
+  .Label {
+    margin: 8px 6px;
+    font-size: var(--veryBigSemibold-font-size);
+  }
+  
+  .Tags {
+    font-size: 14px;
+    font-weight: 400;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 8px 0px;
+  }
+  
+  .Tag {
+    color: var(--cornflower-blue);
+    margin: 4px;
+    padding: 4px 8px;
+    border-radius: 8px;
+    background-color: var(--cornflower-blue-low-opacity);
+  }
+  
+  .Members {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    flex-wrap: wrap;
+    margin: 12px 6px;
+  }
+  
+  .Member {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  
+  .MemberImage {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 4px;
+    box-shadow: var(--shadow-bg-image-project-details);
+  }
+  
+  .MemberName {
+    width: 200px;
+    font-size: var(--bodyMedium-font-size);
+  }
+  
+  .ButtonGroup {
+    display: flex;
+    justify-content: flex-end;
+    margin: 12px 0px;
+    gap: 12px;
+  }
+  
+  .Button {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    text-align: center;
+    padding: 20px 16px;
+    color: var(--white);
+    border-radius: 8px;
+    background-color: var(--cornflower-blue);
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+  
+  @media only screen and (max-width: 600px) {
+    .Title {
+      font-size: 24px;
+      margin: 6px 6px 0px 6px;
+    }
+    .Date {
+      font-size: 12px;
+    }
+    .Desc {
+      font-size: 14px;
+      margin: 6px 6px;
+    }
+    .Tag {
+      font-size: 12px;
+    }
+    .MemberImage {
+      width: 32px;
+      height: 32px;
+    }
+    .MemberName {
+      font-size: 14px;
+    }
+    .Button {
+      gap: 10px;
+    }
+  }
+  

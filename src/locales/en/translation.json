@@ -1,0 +1,67 @@
+{
+    "intro": {
+        "title": "Intro title",
+        "IM": "Intro desctiption",
+        "text": "text",
+        "typeWritter-frontend": "Running line 1",
+        "typeWritter-programmer": "Running line 2"
+      },
+
+      "section": {
+        "skills": {
+            "title": "Skills section",
+            "suptitle": "suptitle"
+        },
+        "projects": {
+            "title": "Project title",
+            "suptitle": "Project subtitle",
+            "toggle-button": {
+                "all": "All",
+                "store": "Store",
+                "landing": "Landing",
+                "others": "Others"
+            },
+            "details": {
+                "buttons": {
+                    "view-code1": "Button title",
+                    "view-code2": "Open github",
+                    "live-app1": "Button title",
+                    "live-app2": "Open website"
+                }
+            }
+        },
+        "contacts": {
+            "title": "Contacts title"
+        }
+      },
+
+      "header": {
+        "logo-title": "Logo title",
+        "About": "About",
+        "projects": "Projects",
+        "contacts": "Contacts",
+        "Button": "header button"
+      },
+
+      "Form": {
+        "title": "Form title",
+        "placeholder-email": "Email",
+        "placeholder-name": "Name",
+        "placeholder-message": "Message",
+        "Button-submit": "Submit",
+        "Button-sent": "Sent"
+      },
+
+      "email": {
+        "required": "Email required",
+        "message": "Please enter valid email! Example: example@gmail.com"
+      },
+
+      "name": {
+        "required": "Name is require field!"
+      },
+
+      "message": {
+        "required": "Message is require field!"
+      }
+}

@@ -1,0 +1,67 @@
+.DarkModeButtonIcon {
+  position: relative;
+  z-index: 8;
+}
+
+.DarkMode {
+  display: flex;
+  order: 3;
+}
+
+@media (max-width: 767.9px) {
+  .DarkMode {
+    order: 0;
+  }
+}
+
+.DarkModeLabel {
+  height: 29px;
+  position: relative;
+  background: var(--charcoal);
+  border-radius: 200px;
+  box-shadow: var(----shadow-label);
+  cursor: pointer;
+  transition: 0.3s;
+  display: flex;
+  justify-content: space-between;
+}
+
+.DarkModeLabel::after {
+  box-shadow: var(--shadow-label-after);
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 1.9px;
+  display: block;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background-color: var(--white);
+  transition: 0.3s;
+  z-index: 9;
+}
+
+.DarkModeLabel:active::after {
+  width: 30px;
+}
+
+.DarkModeInput {
+  width: 0;
+  height: 0;
+  visibility: hidden;
+  border-radius: 50px;
+  background-color: var(--charcoal);
+}
+
+.DarkModeInput:active + .DarkModeLabel::after {
+  left: 57px;
+  transform: translateX(-100%);
+}
+
+.DarkModeSvg {
+  position: relative;
+  height: 29px;
+  width: 29px;
+  top: 8px;
+  z-index: 3;
+}
