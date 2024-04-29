@@ -26,6 +26,14 @@
     background: var(--header-bg);
     line-height: 24px;
   }
+  .HeaderButtonDisplayNone {
+    display: none;
+  }
+  
+	.HeaderButton:hover {
+		box-shadow: var(--shadow-header-button);
+		color: var(--header-bg-slat);
+	}
   .Logo {
     margin-right: auto;
     display: flex;
@@ -55,14 +63,6 @@
     align-items: center;
     column-gap: 40px;
   }
-  .MenuList.list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    row-gap: 10px;
-    column-gap: 25px;
-  }
   
   .MenuItem {
     font-size: 16px;
@@ -75,7 +75,7 @@
     cursor: pointer;
   }
   @media (any-hover: hover) {
-    .MenuItem:not(.active):hover::before {
+    .MenuItem:not(.MenuItemActive)::before {
       content: '';
       position: absolute;
       bottom: 15px;
@@ -85,14 +85,17 @@
       transform: scaleX(0);
       transition: transform 0.3s ease-in-out;
     }
-    .MenuItem:not(.active):hover {
+    .MenuItem:not(.MenuItemActive):hover::before {
+      transform: scaleX(1);
+    }
+    .MenuItem:not(.MenuItemActive):hover {
       color: var(--purple);
     }
-    .MenuItem.active {
+    .MenuItemActive {
       position: relative;
       color: var(--purple);
     }
-    .MenuItem.active::before {
+    .MenuItemActive::before {
       content: '';
       position: absolute;
       left: 0;
@@ -101,12 +104,6 @@
       width: 100%;
       height: 2px;
       border-radius: 10px;
-    }
-    .MenuList.list {
-      flex-direction: column;
-      text-align: center;
-      row-gap: 50px;
-      font-size: 30px;
     }
   }
   
@@ -144,23 +141,28 @@
       background-color: var(--header-bg-slat);
       z-index: 2;
     }
-    .MenuBody.menu-open {
+    .MenuBodyMenuOpen {
       left: 0;
     }
-    .MenuBody.menu-open::before {
+    .MenuBodyMenuOpen::before {
       left: 0;
     }
-    .IconMenu {
-      display: block;
-      position: relative;
-      width: '1.8Rem';
-      height: '1Rem';
-      z-index: 11;
-      order: 9;
+    .HeaderButtonPurple {
+      background: var(--purple);
+      border: 1px solid var(--purple);
+      font-size: 24px;
+    }
+    .HeaderButtonPurple:hover {
+      box-shadow: var(--shadow-header-button);
+      color: var(--header-bg-slat);
+    }
+    .HeaderButtonMenuOpen {
+      display: inline-flex;
     }
   }
 
   .StyledHeader {
+    padding: 0 var(--globalPadding);
     position: fixed;
     top: 0;
     left: 0;
@@ -169,7 +171,73 @@
     transition: all 0.3s ease 0s;
     background-color: var(--header-bg);
   }
-  
   .IconMenu {
     display: block;
+    cursor: pointer;
   }
+  
+  @media (max-width: 991.98px) {
+    .IconMenu {
+      display: block;
+      position: relative;
+      width: 1.875rem;
+      height: 1.125rem;
+      z-index: 11;
+      order: 9;
+    }
+    .MenuItem {
+      font-size: 30px;
+    }
+    .HeaderButton {
+      display: none;
+    }
+    .MenuListOpen {
+      flex-direction: column;
+      text-align: center;
+      row-gap: 50px;
+      font-size: 30px;
+    }
+  
+    .IconMenu:hover {
+      cursor: pointer;
+    }
+  
+    .IconMenu span,
+    .IconMenu::before,
+    .IconMenu::after {
+      content: '';
+      transition: all 0.3s ease 0s;
+      right: 0;
+      position: absolute;
+      width: 100%;
+      height: 0.125rem;
+      background-color: var(--white);
+    }
+  
+    .IconMenu::before {
+      top: 0;
+    }
+  
+    .IconMenu::after {
+      bottom: 0;
+    }
+  
+    .IconMenu span {
+      top: calc(50% - 0.0625rem);
+    }
+  
+    .IconMenuMenuOpen span {
+      width: 0;
+    }
+  
+    .IconMenuMenuOpen::before {
+      top: calc(50% - 0.0625rem);
+      transform: rotate(-45deg);
+    }
+  
+    .IconMenuMenuOpen::after {
+      bottom: calc(50% - 0.0625rem);
+      transform: rotate(45deg);
+    }
+  }
+  

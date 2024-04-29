@@ -1,8 +1,10 @@
-.LanguageText {
+  .LanguageText {
     color: var(--header-text);
     transition: all 0.3s;
   }
-  
+  .LanguageText:hover {
+    color: var(--purple);
+  }
   .LanguageSwitcherContainer {
     display: flex;
     order: 3;

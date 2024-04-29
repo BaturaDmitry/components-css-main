@@ -6,7 +6,12 @@
     z-index: 1;
     align-items: center;
   }
-  
+  .SkillWrapper {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    max-width: 500px;
+  }
   .Wrapper {
     position: relative;
     display: flex;

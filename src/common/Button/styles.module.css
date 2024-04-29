@@ -16,10 +16,3 @@
 		padding: 15px 30px;
 	}
 }
-
-@media (any-hover: hover) {
-	.ButtonStyled:hover {
-		background: var(--button-background-quiternary);
-		color: var(--button-background-primary);
-	}
-}

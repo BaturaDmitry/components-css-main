@@ -13,7 +13,7 @@ export const skills = [
       },
       {
         name: 'Scss',
-        image: 'src/sass.svg',
+        image: 'src/assets/sass.svg',
       },
       {
         name: 'Bootstrap',
@@ -28,11 +28,11 @@ export const skills = [
 
       {
         name: 'React',
-        image: 'src/react.svg',
+        image: 'src/assets/react.svg',
       },
       {
         name: 'Redux',
-        image: 'src/redux.svg',
+        image: 'src/assets/redux.svg',
       },
     ],
   },
@@ -46,7 +46,7 @@ export const skills = [
 
       {
         name: 'PHP',
-        image: 'src/php.svg',
+        image: 'src/assets/php.svg',
       },
       {
         name: 'MySQL',
@@ -61,8 +61,7 @@ export const skills = [
     skills: [
       {
         name: 'Git',
-        image:
-          'https://camo.githubusercontent.com/fbfcb9e3dc648adc93bef37c718db16c52f617ad055a26de6dc3c21865c3321d/68747470733a2f2f7777772e766563746f726c6f676f2e7a6f6e652f6c6f676f732f6769742d73636d2f6769742d73636d2d69636f6e2e737667',
+        image: 'https://git-scm.com/images/logos/downloads/Git-Icon-1788C.svg',
       },
       {
         name: 'GitHub',
@@ -76,21 +75,19 @@ export const skills = [
       },
       {
         name: 'Gulp',
-        image: 'src/gulp.svg',
+        image: 'src/assets/gulp.svg',
       },
       {
         name: 'Adobe PS',
-        image: 'src/Ps.svg',
+        image: 'src/assets/Ps.svg',
       },
       {
         name: 'Adobe XD',
-        image:
-          'https://camo.githubusercontent.com/c205ecbe12500177d102169d97bc1c17c545155fdf5ec78c08d54ac53e5b38c1/68747470733a2f2f63646e2e776f726c64766563746f726c6f676f2e636f6d2f6c6f676f732f61646f62652d78642e737667',
+        image: 'src/assets/adobe-xd.svg',
       },
       {
         name: 'Figma',
-        image:
-          'https://camo.githubusercontent.com/ed93c2b000a76ceaad1503e7eb9356591b885227e82a36a005b9d3498b303ba5/68747470733a2f2f7777772e766563746f726c6f676f2e7a6f6e652f6c6f676f732f6669676d612f6669676d612d69636f6e2e737667',
+        image: 'src/assets/figma.svg',
       },
     ],
   },

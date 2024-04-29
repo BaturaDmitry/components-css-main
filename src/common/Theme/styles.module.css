@@ -19,7 +19,7 @@
   position: relative;
   background: var(--charcoal);
   border-radius: 200px;
-  box-shadow: var(----shadow-label);
+  box-shadow: var(--shadow-label);
   cursor: pointer;
   transition: 0.3s;
   display: flex;
@@ -41,9 +41,6 @@
   z-index: 9;
 }
 
-.DarkModeLabel:active::after {
-  width: 30px;
-}
 
 .DarkModeInput {
   width: 0;
@@ -53,7 +50,7 @@
   background-color: var(--charcoal);
 }
 
-.DarkModeInput:active + .DarkModeLabel::after {
+.DarkModeInputActive + .DarkModeLabel::after {
   left: 57px;
   transform: translateX(-100%);
 }

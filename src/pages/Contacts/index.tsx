@@ -12,26 +12,36 @@ export const Contacts = (): JSX.Element => {
   }, [])
   return (
     <div className={styles.Container}>
-      <div className={styles.Title}>{t('section.contacts.title')}</div>
+      <div
+        className={`${anims.AnimShowVertical} animItems`}
+        style={{ transition: 'all 0.5s ease 0.05s' }}
+      >
+        <div className={styles.Title}>{t('section.contacts.title')}</div>
+      </div>
       <Form />
-      <ul className={styles.SocialList}>
-        <li>
-          <Button
-            link="https://www.google.com/"
-            icon="telegram"
-            text="Telegram"
-            modifier={styles.SocialItem}
-          />
-        </li>
-        <li>
-          <Button
-            link="https://www.google.com/"
-            icon="linkedin"
-            text="LinkedIn"
-            modifier={styles.SocialItem}
-          />
-        </li>
-      </ul>
+      <div
+        className={`${anims.AnimShowVertical} animItems`}
+        style={{ transition: 'all 0.8s ease 0.3s' }}
+      >
+        <ul className={styles.SocialList}>
+          <li>
+            <Button
+              link="https://www.google.com/"
+              icon="telegram"
+              text="Telegram"
+              modifier={styles.SocialItem}
+            />
+          </li>
+          <li>
+            <Button
+              link="https://www.google.com/"
+              icon="linkedin"
+              text="LinkedIn"
+              modifier={styles.SocialItem}
+            />
+          </li>
+        </ul>
+      </div>
     </div>
   )
 }

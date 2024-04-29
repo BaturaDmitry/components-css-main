@@ -7,7 +7,6 @@ import Moon from './svg/moon.svg'
 export const Theme = (): JSX.Element => {
   const dispatch = useDispatch()
   const currentTheme = useSelector(selectTheme)
-  const clickedClass = 'active'
 
   const handleTheme = (): void => {
     if (currentTheme === 'dark') {
@@ -20,7 +19,9 @@ export const Theme = (): JSX.Element => {
   return (
     <div className={styles.DarkMode}>
       <input
-        className={`${styles.DarkModeInput} ${currentTheme === 'dark' ? clickedClass : ''}`}
+        className={`${styles.DarkModeInput} ${
+          currentTheme === 'dark' ? styles.DarkModeInputActive : ''
+        }`}
         type="checkbox"
         id="dark__mode-toggle"
         onChange={handleTheme}

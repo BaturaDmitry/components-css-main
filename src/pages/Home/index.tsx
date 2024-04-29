@@ -17,28 +17,35 @@ export const Home = (): JSX.Element => {
       <div className={styles.Section}>
         <div className={styles.Intro}>
           <div className={styles.IntroBody}>
-            <h1 className={styles.IntroTitle}>
-              {t('intro.title')}
-              <br />
-              <div className={styles.TypeWriterContainer}>
-                {t('intro.IM')}
-                <div className={styles.TypeWriterWrapper}>
-                  <Typewriter
-                    options={{
-                      strings: [t('intro.typeWritter-programmer'), t('intro.typeWritter-frontend')],
-                      autoStart: true,
-                      loop: true,
-                      delay: 120,
-                    }}
-                  />
+            <div className={`${anims.AnimShowVertical} animItems`}>
+              <h1 className={styles.IntroTitle}>
+                {t('intro.title')}
+                <br />
+                <div className={styles.TypeWriterContainer}>
+                  {t('intro.IM')}
+                  <div className={styles.TypeWriterWrapper}>
+                    <Typewriter
+                      options={{
+                        strings: [
+                          t('intro.typeWritter-programmer'),
+                          t('intro.typeWritter-frontend'),
+                        ],
+                        autoStart: true,
+                        loop: true,
+                        delay: 120,
+                      }}
+                    />
+                  </div>
                 </div>
+              </h1>
+              <div className={styles.IntroText}>
+                <p>{t('intro.text')}</p>
               </div>
-            </h1>
-            <div className={styles.IntroText}>
-              <p>{t('intro.text')}</p>
             </div>
           </div>
-          <img className={styles.IntroImage} src={Image} alt="" />
+          <div className={`${anims.AnimShowHorizontal} animItems`}>
+            <img className={styles.IntroImage} src={Image} alt="" />
+          </div>
         </div>
       </div>
       <div className={styles.SectionSkills}>

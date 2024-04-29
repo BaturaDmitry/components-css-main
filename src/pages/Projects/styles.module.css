@@ -26,6 +26,8 @@
   }
   
   .Title {
+    font-size: 60px;
+    font-weight: 600;
     transition: all .5s ease .05s;
     text-align: center;
     color: var(--projects-title);

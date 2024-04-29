@@ -1,6 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&family=Open+Sans:wght@400;600;800&family=Oswald:wght@700&family=Squada+One&family=Nunito+Sans:wght@400;600;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;700;900&display=swap');
 
 :root {
+	--globalPadding: 0.9375rem;
 	--black: #000;
 	--semi-transparent-black: rgba(0, 0, 0, 0.4);
 	--dupont: #171718;
@@ -38,7 +39,9 @@
 	--shadow-bg-image-project-details: rgba(0, 0, 0, 0.3) 0px 0px 10px 0px;
 	--shadow-bg-skill: rgba(23, 92, 230, 0.15) 0px 4px 24px;
 	--shadow-label: inset 0 5px 15px rgba(0,0,0,.4),inset 0 -5px 15px hsla(0,0%,100%,.4);
-	--preloader: blue;
+	--shadow-header-button: inset 340px 0 0 0 var(--white);
+	--preloader: var(--purple);	
+	--preloader-span: rgba(92, 98, 236, 1);
 }
 
 [data-theme='light'] {
@@ -108,7 +111,7 @@ body {
   font-size: 16px;
   font-weight: 400;
   line-height: 1;
-  font-family: 'Nunito Sans', sans-serif;
+  font-family: 'Nunito';
   scroll-behavior: smooth;
   -ms-text-size-adjust: 100%;
   -moz-text-size-adjust: 100%;

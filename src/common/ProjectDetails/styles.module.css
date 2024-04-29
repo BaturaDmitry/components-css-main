@@ -42,7 +42,6 @@
   
   .Desc {
     margin: 8px 6px;
-    font-size: var(--bodyRegular-font-size);
   }
   
   .Image {
@@ -99,7 +98,6 @@
   
   .MemberName {
     width: 200px;
-    font-size: var(--bodyMedium-font-size);
   }
   
   .ButtonGroup {
@@ -123,6 +121,9 @@
     cursor: pointer;
     text-decoration: none;
     transition: all 0.3s ease;
+  }
+  .Button:hover {
+    opacity: 0.7;
   }
   
   @media only screen and (max-width: 600px) {

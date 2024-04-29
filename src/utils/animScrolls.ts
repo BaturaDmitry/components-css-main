@@ -1,6 +1,5 @@
 export default function animScroll(): void {
-  const animItems = document.querySelectorAll('._anim-items')
-  console.error(animItems)
+  const animItems = document.querySelectorAll('.animItems')
   const animOnScroll = (): void => {
     for (let index = 0; index < animItems.length; index++) {
       const animItem = animItems[index] as HTMLElement
@@ -17,11 +16,7 @@ export default function animScroll(): void {
         window.scrollY > animItemOffset - animItemPoint &&
         window.scrollY < animItemOffset + animItemHeight
       ) {
-        animItem.classList.add('_active')
-      } else {
-        if (!animItem.classList.contains('_anim-no-hide')) {
-          animItem.classList.remove('_active')
-        }
+        animItem.classList.add('Animation')
       }
     }
   }

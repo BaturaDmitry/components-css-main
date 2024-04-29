@@ -13,19 +13,33 @@ export const Skills = (): JSX.Element => {
   return (
     <div className={styles.Container}>
       <div className={styles.Wrapper}>
-        <div className={styles.Title}>{t('section.skills.title')}</div>
-        <div className={styles.Desc}>{t('section.skills.suptitle')}</div>
+        <div
+          className={`${anims.AnimShowVertical} animItems`}
+          style={{ transition: 'all 0.5s ease 0.05s' }}
+        >
+          <div className={styles.Title}>{t('section.skills.title')}</div>
+        </div>
+        <div
+          className={`${anims.AnimShowVertical} animItems`}
+          style={{ transition: 'all 0.5s ease 0.05s' }}
+        >
+          <div className={styles.Desc}>{t('section.skills.suptitle')}</div>
+        </div>
         <div className={styles.SkillsContainer}>
           {skills.map((skill, i) => (
-            <div key={i} className={styles.Skill}>
-              <h2 className={styles.SkillTitle}>{skill.title}</h2>
-              <div className={styles.SkillList}>
-                {skill.skills.map((item, name) => (
-                  <div key={name} className={styles.SkillItem}>
-                    <img className={styles.SkillImage} src={item.image} alt="skill image" />
-                    {item.name}
-                  </div>
-                ))}
+            <div className={`${anims.AnimShowHorizontal} ${styles.SkillWrapper} animItems`} key={i}>
+              <div key={i} className={styles.Skill}>
+                <h2 className={styles.SkillTitle}>{skill.title}</h2>
+                <div className={styles.SkillList}>
+                  {skill.skills.map((item, name) => (
+                    <div className={`${anims.AnimShowHorizontal} animItems`} key={name}>
+                      <div key={name} className={styles.SkillItem}>
+                        <img className={styles.SkillImage} src={item.image} alt="skill image" />
+                        {item.name}
+                      </div>
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
           ))}

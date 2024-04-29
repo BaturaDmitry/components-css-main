@@ -9,7 +9,6 @@ import { Button } from '../Button'
 export const Header = (): JSX.Element => {
   const { t } = useTranslation()
   const [click, setClick] = useState<boolean>(false)
-  const activeLink = 'active'
 
   const onClickIcon = (): void => {
     setClick(!click)
@@ -36,16 +35,19 @@ export const Header = (): JSX.Element => {
           </div>
         </NavLink>
         <Theme />
-        <button className={styles.IconMenu} onClick={onClickIcon}>
+        <button
+          className={`${styles.IconMenu} ${click ? `${styles.IconMenuMenuOpen}` : ''}`}
+          onClick={onClickIcon}
+        >
           <span></span>
         </button>
 
-        <nav className={`${styles.MenuBody} ${click ? 'menu-open' : ''}`}>
-          <ul className={`${styles.MenuList} list`}>
-            <li className="menu__item">
+        <nav className={`${styles.MenuBody} ${click ? `${styles.MenuBodyMenuOpen}` : ''}`}>
+          <ul className={`${styles.MenuList} ${click ? `${styles.MenuListOpen}` : ''}`}>
+            <li>
               <NavLink
                 className={({ isActive }) =>
-                  isActive ? `${styles.MenuItem} ${activeLink}` : `${styles.MenuItem}`
+                  isActive ? `${styles.MenuItem} ${styles.MenuItemActive}` : `${styles.MenuItem}`
                 }
                 to="/"
                 onClick={closeMobileMenu}
@@ -53,10 +55,10 @@ export const Header = (): JSX.Element => {
                 {t('header.About')}
               </NavLink>
             </li>
-            <li className="menu__item">
+            <li>
               <NavLink
                 className={({ isActive }) =>
-                  isActive ? `${styles.MenuItem} ${activeLink}` : `${styles.MenuItem}`
+                  isActive ? `${styles.MenuItem} ${styles.MenuItemActive}` : `${styles.MenuItem}`
                 }
                 to="/projects"
                 onClick={closeMobileMenu}
@@ -64,16 +66,26 @@ export const Header = (): JSX.Element => {
                 {t('header.projects')}
               </NavLink>
             </li>
-            <li className="menu__item">
+            <li>
               <NavLink
                 className={({ isActive }) =>
-                  isActive ? `${styles.MenuItem} ${activeLink}` : `${styles.MenuItem}`
+                  isActive ? `${styles.MenuItem} ${styles.MenuItemActive}` : `${styles.MenuItem}`
                 }
                 to="/contacts"
                 onClick={closeMobileMenu}
               >
                 {t('header.contacts')}
               </NavLink>
+            </li>
+            <li>
+              <Button
+                modifier={`${styles.HeaderButtonDisplayNone} ${styles.HeaderButtonPurple} ${
+                  click ? styles.HeaderButtonMenuOpen : ``
+                }`}
+                link="https://github.com/kenform"
+                icon="github"
+                text={t('header.Button')}
+              />
             </li>
           </ul>
         </nav>
